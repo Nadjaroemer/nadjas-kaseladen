@@ -21,9 +21,9 @@
 
                 <nav class = "navigation">                          <!--Navigation-->
                     <ul class = "navigation__ul">
-                        <li><a href="index.html" class = "li_style">Overview</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="opskrifter.html">Products</a></li>
+                        <li><a href="author.html">Shop</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li class = "navigation__icon"><a href="https://twitter.com/explore" target="_blank"><i class="fab fa-twitter"></i></a></li><!--Twitter Icon-->
                         <li><a href="https://www.instagram.com/ target = "_blank><i class="fab fa-instagram"></i></a></li><!--Instagram Icon-->
@@ -32,33 +32,27 @@
                 </nav>
             </header>
 
-            <main>     
-                
-                <h1 class = main__h1>A gourmet marketplace for high-quality cheeses from all over the world.</h1> 
-                <h2 class = main__h2>Discover a selection of our most popular cheeses here.</h2>                                           <!--MAIN START-->
-                
-                <article class="cheeseSelection">
-                    <ul class="cheeseList">
-
-                    </ul>
-
+            <main>          
+                <a href="index.html" class = "back">&lt;&lt; Back</a>                                       <!--MAIN START-->
+                <article class = "singleCheese">
+                    <h1 class = "name"></h1>
+                    <p>Weight: <span class = "weight"></span></p>
+                    <p>Strength: <span class = "strength"></span></p>
+                    <p>Brand: <span class = "brand"></span></p>
                 </article>
-                <div class = "pageLinks">                         <!--PREVIOUS and NEXT LINKS -->
-                    <a href = "" class = "previousPage">&lt;&lt; Previous Page</a>
-                    <a href = "" class = "nextPage">Next Page &gt;&gt;</a>
-                </div>
+                
             </main>                                               <!--MAIN END-->
             
             <footer>                                              <!--FOOTER START-->
                 <nav class = "navigation">                        <!--FOOTER Navigation-->
                     <ul class = "navigation__ul">
-                        <li><a href="index.html" class="li_style">Home</a></li>
-                        <li><a href="opskrifter.html">Products</a></li>
-                        <li><a href="index.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li class = "navigation__icon"><a href="https://twitter.com/explore" target="_blank"><i class="fab fa-twitter"></i></a></li><!--Twitter Icon-->
-                        <li><a href="https://www.instagram.com/ target="_blank><i class="fab fa-instagram"></i></a></li><!--Instagram Icon-->
-                        <li><a href="https://www.facebook.com/ target="_blank><i class="fab fa-facebook-f"></i></a></li><!--Facebook Icon-->
+                        <li><a href = "index.html">Overview</a></li>
+                        <li><a href = "cheese.html">Product</a></li>
+                        <li><a href = "index.html">About</a></li>
+                        <li><a href = "contact.html">Contact</a></li>
+                        <li class = "navigation__icon"><a href="https://twitter.com/explore" target = "_blank"><i class="fab fa-twitter"></i></a></li><!--Twitter Icon-->
+                        <li><a href = "https://www.instagram.com/ target = "_blank><i class="fab fa-instagram"></i></a></li><!--Instagram Icon-->
+                        <li><a href = "https://www.facebook.com/ target = "_blank><i class="fab fa-facebook-f"></i></a></li><!--Facebook Icon-->
                     </ul>
                 </nav>
 
@@ -69,13 +63,7 @@
             </footer>                                           <!--FOOTER END-->
         </div>                                                  <!--END OF WRAPPER-->
 
-        <template id="products">                            <!--TEMPLATE to insert CHEESES -->
-            <li>
-                <a href="" class="cheeses"></a>
-            </li>
-            
-        </template>
-        <script src="./app.js" async defer></script>
+        <script src="./singleCheese.js" async defer></script>
     </body>
 
 </html>
