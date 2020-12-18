@@ -1,21 +1,20 @@
 var url = new URLSearchParams(window.location.search);
 var offset = url.get("offset") ? url.get("offset") : 0;
 
-let nextOffset, prevOffset;
+var nextOffset, prevOffset;
 
-let nextPage = document.querySelector(".nextPage");
-let previousPage = document.querySelector(".previousPage");
+var nextPage = document.querySelector(".nextPage");
+var previousPage = document.querySelector(".previousPage");
 
+//previousPage.remove();
 fetch(`https://osteapi-nadja.herokuapp.com/api/v1/cheeses?offset=${offset}`)
     .then(res => res.json())
-    .then(function(data){
-        //console.log(data);
-
+    .then(function(data) {
         let maxOffset = data.count - (data.count % 5);//Math.ceil runder op til det nærmeste hele tal
 
         nextOffset = offset >= maxOffset ? maxOffset : parseInt(offset) + 5; //Ternery Operator
 
-        prevOffset = offset <= 0 ? 0 : parseInt(offset) - 5;//Ternery Operator
+        prevOffset = offset <= 0 ? 0 : parseInt(offset) - 5;
 
         nextPage.href = `?offset=${(nextOffset)}`;
         previousPage.href = `?offset=${(prevOffset)}`
